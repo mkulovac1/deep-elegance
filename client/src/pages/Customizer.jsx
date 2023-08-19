@@ -41,10 +41,29 @@ const Customizer = () => {
         />
         // break;
       case 'aipicker':
-        return <AIPicker />
+        return <AIPicker 
+          prompt={prompt}
+          setPrompt={setPrompt}
+          generatingImg={generatingImg}
+          handleSumbit={handleSumbit}
+        />
         // break;
       default:
         return null;
+    }
+  }
+
+  const handleSumbit = async (type) => {
+    if(!prompt) return alert("Please enter a prompt");
+    try {
+      // caling API (BE) to generate a new image
+    }
+    catch (err) {
+      alert(err)
+    } 
+    finally {
+      setGeneratingImg(false)
+      setActiveEditorTab("")
     }
   }
 
