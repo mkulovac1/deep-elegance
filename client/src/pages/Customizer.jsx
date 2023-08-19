@@ -60,6 +60,14 @@ const Customizer = () => {
         state.isFullTexture = true;
         state.isLogoTexture = false;
     }
+
+    // set state to update UI
+    setActiveFilterTab((prevState) => {
+        return {
+          ...prevState,
+          [tabName]: !prevState[tabName] // toggle on-off
+        }
+    })
   }
 
   const handleDecals = (type, res) => { 
@@ -125,8 +133,8 @@ const Customizer = () => {
                 key={tab.name}
                 tab={tab}
                 isFilterTab
-                isActiveTab=""
-                handleClick={() => {}}  
+                isActiveTab={activeFilterTab[tab.name]}
+                handleClick={() => handleActiveFilterTab(tab.name)}  
               />
             ))}
           </motion.div>
