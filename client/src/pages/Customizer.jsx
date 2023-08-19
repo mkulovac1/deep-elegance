@@ -27,36 +27,27 @@ const Customizer = () => {
     stylishShirt: false,
   })
     
-  // show content based on clicked tab:
-  const generateTabContent = () => {
-    switch (activeEditorTab) { 
-      case 'colorpicker':
-        return <ColorPicker />
-        // break;
-      case 'filepicker':
-        return <FilePicker 
-          file={file}
-          setFile={setFile}
-          readFile={readFile}
-        />
-        // break;
-      case 'aipicker':
-        return <AIPicker 
-          prompt={prompt}
-          setPrompt={setPrompt}
-          generatingImg={generatingImg}
-          handleSumbit={handleSumbit}
-        />
-        // break;
-      default:
-        return null;
-    }
-  }
-
-  const handleSumbit = async (type) => {
+  const handleSubmit = async (type) => {
     if(!prompt) return alert("Please enter a prompt");
+    
     try {
       // caling API (BE) to generate a new image
+
+      setGeneratingImg(true)
+      
+      const res = await fetch('http://localhost:8080/api/v1/dalle', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+          prompt,
+        })
+      })
+
+      const data = await res.json()
+
+      handleDecals(type, `data:image/png;base64,${data.photo}`) // update 3D model with new image
     }
     catch (err) {
       alert(err)
@@ -66,6 +57,32 @@ const Customizer = () => {
       setActiveEditorTab("")
     }
   }
+
+    // show content based on clicked tab:
+    const generateTabContent = () => {
+      switch (activeEditorTab) { 
+        case 'colorpicker':
+          return <ColorPicker />
+          // break;
+        case 'filepicker':
+          return <FilePicker 
+            file={file}
+            setFile={setFile}
+            readFile={readFile}
+          />
+          // break;
+        case 'aipicker':
+          return <AIPicker 
+            prompt={prompt}
+            setPrompt={setPrompt}
+            generatingImg={generatingImg}
+            handleSubmit={handleSubmit}
+          />
+          // break;
+        default:
+          return null;
+      }
+    }
 
   const handleActiveFilterTab = (tabName) => { 
     switch (tabName) { 
