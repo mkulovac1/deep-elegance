@@ -14,6 +14,8 @@ import { fadeAnimation, slideAnimation } from '../config/motion'
 
 import { AIPicker, FilePicker, ColorPicker, Tab, CustomButton } from '../components'
 
+
+
 const Customizer = () => {
   const snap = useSnapshot(state)
   
@@ -27,6 +29,7 @@ const Customizer = () => {
     stylishShirt: false,
   })
     
+
   const handleSubmit = async (type) => {
     if(!prompt) return alert("Please enter a prompt");
     
@@ -35,17 +38,37 @@ const Customizer = () => {
 
       setGeneratingImg(true)
       
-      const res = await fetch('http://localhost:8080/api/v1/dalle', {
+      /* const response = await axios.post(
+        'https://api.openai.com/v1/images/generations',
+        {
+          prompt: 'funny logo',
+          n: 1,                                //define the number of images
+          size: '512x512',                     //define the resolution of image
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Authorization': `Bearer ${API_KEY}`,
+          },
+        }
+      );
+  
+      console.log("Link for image from API:", response.data.data[0].url); 
+      
+      handleDecals(type, response.data.data[0].url) // update 3D model with new image */
+
+      const response = await fetch('http://localhost:8080/api/v1/dalle', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
+        headers: { 
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          prompt,
+          prompt, 
         })
       })
 
-      const data = await res.json()
+      const data = await response.json()
 
       handleDecals(type, `data:image/png;base64,${data.photo}`) // update 3D model with new image
     }
