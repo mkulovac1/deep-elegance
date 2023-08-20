@@ -69,6 +69,7 @@ To run this project locally you need to do following (prerequisites and installa
 
 * Visual studio code
 * Node.js
+* Dall e 2 OpenAI API key
 * npm
   ```sh
   npm install npm@latest -g
@@ -81,28 +82,32 @@ To run this project locally you need to do following (prerequisites and installa
    git clone https://github.com/mkulovac1/deep-elegance
    ```
 2. Open this project in Visual studio code
-3. Write this command in vscode terminal
+3. In server directory create file with name ".env" and in there enter your Dall e 2 OpenAI API key
+   ```
+   OPENAI_API_KEY = YOUR_API_KEY
+   ```
+4. Write this command in vscode terminal
    ```
    cd server
    ```
-4. Install NPM packages through terminal
+5. Install NPM packages through terminal
    ```
    npm install
    ```
-5. Run express server (backend) through terminal
+6. Run express server (backend) through terminal
    ```
    npm start
    ```
-6. Open new terminal in vscode
-7. Write this command in vscode terminal
+7. Open new terminal in vscode
+8. Write this command in vscode terminal
    ```
    cd client
    ```
-8. Install NPM packages through terminal
+9. Install NPM packages through terminal
    ```
    npm install
    ```
-9. Run application (frontend) through terminal
+10. Run application (frontend) through terminal
    ```
    npm run dev
    ```
@@ -148,6 +153,28 @@ Here you can see examples of using app on **desktop** devices.
   <img src="documentation/upload-full-image-desktop.png" alt="upload-full-image-desktop">
 </a>
 
+**Making logo with AI:**
+<a href="https://harmony-hub-app.netlify.app/">
+  <img src="documentation/ai-picker-logo.png" alt="upload-full-image-desktop">
+</a>
+
+**Result:**
+
+<a href="https://harmony-hub-app.netlify.app/">
+  <img src="documentation/ai-picker-logo2.png" alt="upload-full-image-desktop">
+</a>
+
+**Making full image with AI:**
+<a href="https://harmony-hub-app.netlify.app/">
+  <img src="documentation/ai-picker-full.png" alt="upload-full-image-desktop">
+</a>
+
+**Result:**
+
+<a href="https://harmony-hub-app.netlify.app/">
+  <img src="documentation/ai-picker-full2.png" alt="upload-full-image-desktop">
+</a>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Mobile
@@ -191,6 +218,36 @@ Here you can see examples of using app on **mobile** devices.
 <p align="center">
   <a href="https://harmony-hub-app.netlify.app/">
     <img src="documentation/upload-full-image-mobile.png" alt="upload-full-image-desktop">
+  </a>
+</p>
+
+**Making logo with AI:**
+<p align="center">
+  <a href="https://harmony-hub-app.netlify.app/">
+    <img src="documentation/ai-picker-logo-mobile.png" alt="upload-full-image-desktop">
+  </a>
+</p>
+
+**Result:**
+
+<p align="center">
+  <a href="https://harmony-hub-app.netlify.app/">
+    <img src="documentation/ai-picker-logo-mobile2.png" alt="upload-full-image-desktop">
+  </a>
+</p>
+
+**Making full image with AI:**
+<p align="center">
+  <a href="https://harmony-hub-app.netlify.app/">
+    <img src="documentation/ai-picker-full-mobile.png" alt="upload-full-image-desktop">
+  </a>
+</p>
+
+**Result:**
+
+<p align="center">
+  <a href="https://harmony-hub-app.netlify.app/">
+    <img src="documentation/ai-picker-full-mobile2.png" alt="upload-full-image-desktop">
   </a>
 </p>
 
