@@ -53,7 +53,7 @@ You can see this project deployed on the link: [CLICK ME](https://deep-elegance-
 
 * React
 * Tailwind CSS
-* Express.js
+* Express
 * Node.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -70,10 +70,7 @@ To run this project locally you need to do following (prerequisites and installa
 * Visual studio code
 * Node.js
 * Dall e 2 OpenAI API key
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+
 
 ### Installation
 
