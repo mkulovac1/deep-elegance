@@ -126,11 +126,15 @@ Here you can see examples of using app on **desktop** devices.
   <img src="documentation/home-page-desktop.png" alt="home-page-desktop">
 </a>
 
+<br> <br> <br> <br>
+
 **Customize page:**
 
 <a href="https://deep-elegance-maker.netlify.app//">
   <img src="documentation/customize-page-desktop.png" alt="customize-page-desktop">
 </a>
+
+<br> <br> <br> <br>
 
 **Choosing t-shirt color:**
 
@@ -138,11 +142,15 @@ Here you can see examples of using app on **desktop** devices.
   <img src="documentation/color-picker-desktop.png" alt="color-picker-desktop">
 </a>
 
+<br> <br> <br> <br>
+
 **Uploading logo image:**
 
 <a href="https://deep-elegance-maker.netlify.app//">
   <img src="documentation/upload-logo-desktop.png" alt="upload-logo-desktop">
 </a>
+
+<br> <br> <br> <br>
 
 **Uploading full image:**
 
@@ -150,10 +158,14 @@ Here you can see examples of using app on **desktop** devices.
   <img src="documentation/upload-full-image-desktop.png" alt="upload-full-image-desktop">
 </a>
 
+<br> <br> <br> <br>
+
 **Making logo with AI:**
 <a href="https://deep-elegance-maker.netlify.app//">
   <img src="documentation/ai-picker-logo.png" alt="upload-full-image-desktop">
 </a>
+
+<br> <br> <br> <br>
 
 **Result:**
 
@@ -161,10 +173,14 @@ Here you can see examples of using app on **desktop** devices.
   <img src="documentation/ai-picker-logo2.png" alt="upload-full-image-desktop">
 </a>
 
+<br> <br> <br> <br>
+
 **Making full image with AI:**
 <a href="https://deep-elegance-maker.netlify.app//">
   <img src="documentation/ai-picker-full.png" alt="upload-full-image-desktop">
 </a>
+
+<br> <br> <br> <br>
 
 **Result:**
 
@@ -185,6 +201,7 @@ Here you can see examples of using app on **mobile** devices.
     </a>
 </p>
 
+<br> <br> <br> <br>
 
 **Customize page:**
 
@@ -194,6 +211,7 @@ Here you can see examples of using app on **mobile** devices.
   </a>  
 </p>
 
+<br> <br> <br> <br>
 
 **Choosing t-shirt color:**
 <p align="center">
@@ -201,6 +219,8 @@ Here you can see examples of using app on **mobile** devices.
     <img src="documentation/color-picker-mobile.png" alt="color-picker-desktop">
   </a>
 </p>
+
+<br> <br> <br> <br>
 
 **Uploading logo image:**
 
@@ -210,6 +230,8 @@ Here you can see examples of using app on **mobile** devices.
   </a>
 </p>
 
+<br> <br> <br> <br>
+
 **Uploading full image:**
 
 <p align="center">
@@ -218,12 +240,16 @@ Here you can see examples of using app on **mobile** devices.
   </a>
 </p>
 
+<br> <br> <br> <br>
+
 **Making logo with AI:**
 <p align="center">
   <a href="https://deep-elegance-maker.netlify.app//">
     <img src="documentation/ai-picker-logo-mobile.png" alt="upload-full-image-desktop">
   </a>
 </p>
+
+<br> <br> <br> <br>
 
 **Result:**
 
@@ -233,12 +259,16 @@ Here you can see examples of using app on **mobile** devices.
   </a>
 </p>
 
+<br> <br> <br> <br>
+
 **Making full image with AI:**
 <p align="center">
   <a href="https://deep-elegance-maker.netlify.app//">
     <img src="documentation/ai-picker-full-mobile.png" alt="upload-full-image-desktop">
   </a>
 </p>
+
+<br> <br> <br> <br>
 
 **Result:**
 
