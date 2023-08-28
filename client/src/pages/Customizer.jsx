@@ -29,6 +29,9 @@ const Customizer = () => {
     stylishShirt: false,
   })
     
+  const handleActiveEditorTab = (tabName) => { 
+    setActiveEditorTab((prevTab) => (prevTab === tabName ? '' : tabName));
+  }
 
   const handleSubmit = async (type) => {
     if(!prompt) return alert("Please enter a prompt");
@@ -58,7 +61,7 @@ const Customizer = () => {
       
       handleDecals(type, response.data.data[0].url) // update 3D model with new image */
 
-      const response = await fetch('http://localhost:8080/api/v1/dalle', {
+      const response = await fetch('https://deep-elegance-maker.onrender.com/api/v1/dalle', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -85,22 +88,22 @@ const Customizer = () => {
     const generateTabContent = () => {
       switch (activeEditorTab) { 
         case 'colorpicker':
-          return <ColorPicker />
+          return activeEditorTab === 'colorpicker' ? <ColorPicker /> : null;
           // break;
         case 'filepicker':
-          return <FilePicker 
-            file={file}
-            setFile={setFile}
-            readFile={readFile}
-          />
+          return activeEditorTab === 'filepicker' ? (
+            <FilePicker file={file} setFile={setFile} readFile={readFile} />
+          ) : null;
           // break;
         case 'aipicker':
-          return <AIPicker 
-            prompt={prompt}
-            setPrompt={setPrompt}
-            generatingImg={generatingImg}
-            handleSubmit={handleSubmit}
-          />
+          return activeEditorTab === 'aipicker' ? (
+            <AIPicker
+              prompt={prompt}
+              setPrompt={setPrompt}
+              generatingImg={generatingImg}
+              handleSubmit={handleSubmit}
+            />
+          ) : null;
           // break;
         default:
           return null;
@@ -162,7 +165,8 @@ const Customizer = () => {
                     <Tab 
                       key={tab.name}
                       tab={tab}
-                      handleClick={() => setActiveEditorTab(tab.name)}  
+                      isActiveTab={activeEditorTab === tab.name}
+                      handleClick={() => handleActiveEditorTab(tab.name)}  //tab, isFilterTab, isActiveTab, handleClick
                     />
                   ))}
 
